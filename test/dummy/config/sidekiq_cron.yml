@@ -1,0 +1,5 @@
+rake task does stuff:
+  cron: "42 0 * * *"
+  class: "RakeTaskJob"
+  args:
+    - does:stuff
