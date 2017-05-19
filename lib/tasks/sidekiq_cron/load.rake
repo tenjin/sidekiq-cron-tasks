@@ -3,10 +3,9 @@ namespace :sidekiq_cron do
   task load: :environment do
     config = Sidekiq::Cron::Tasks.config
 
-    next unless File.exist?(config.file)
+    next if config.schedule.empty?
 
-    original_hash = YAML.load_file(config.file)
-    prefixed_hash = original_hash.each_with_object({}) do |(name, options), new_hash|
+    prefixed_hash = config.schedule.each_with_object({}) do |(name, options), new_hash|
       prefixed_name = name.sub(/\A(#{config.prefix} )?/, config.prefix + " ")
       new_hash[prefixed_name] = options
     end

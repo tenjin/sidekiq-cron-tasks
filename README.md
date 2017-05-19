@@ -16,11 +16,21 @@ bundle exec rake sidekiq_cron:load
 It expects a configuration file at `config/sidekiq_cron.yml` in this format:
 
 ```yml
-rake task does stuff:
-  cron: "42 0 * * *"
-  class: "RakeTaskJob"
-  args:
-    - does:stuff
+default: &defaults
+  rake task does stuff:
+    cron: "42 0 * * *"
+    class: "RakeTaskJob"
+    args:
+      - does:stuff
+
+development:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
 ```
 
 You can configure the location of this file, as well as name prefixes for tasks:
