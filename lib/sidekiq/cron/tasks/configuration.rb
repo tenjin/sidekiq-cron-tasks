@@ -14,7 +14,7 @@ module Sidekiq
         end
 
         def schedule
-          @schedule ||= File.exist?(file) ? YAML.load_file(file).fetch(Rails.env, {}) : {}
+          @schedule ||= File.exist?(file) ? YAML.load_file(file).fetch(::Rails.env, {}) : {}
         end
       end
     end
