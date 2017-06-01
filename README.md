@@ -1,5 +1,7 @@
 # Sidekiq::Cron::Tasks
 
+[![Build Status](https://travis-ci.org/coverhound/sidekiq-cron-tasks.svg?branch=master)](https://travis-ci.org/coverhound/sidekiq-cron-tasks)
+
 Adds `rake` and `cap` tasks for loading `Sidekiq::Cron::Job`s from a config
 file.
 
