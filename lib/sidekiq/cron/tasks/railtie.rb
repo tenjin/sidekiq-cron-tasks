@@ -3,7 +3,7 @@ module Sidekiq
     module Tasks
       class Railtie < ::Rails::Railtie
         rake_tasks do
-          load "tasks/sidekiq_cron/load.rake"
+          load "tasks/sidekiq_cron/tasks.rake"
         end
       end
     end
