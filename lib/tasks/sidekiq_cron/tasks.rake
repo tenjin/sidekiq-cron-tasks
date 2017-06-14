@@ -10,7 +10,13 @@ namespace :sidekiq_cron do
       new_hash[prefixed_name] = options
     end
 
-    Sidekiq::Cron::Job.all.select { |job| job.name =~ /\A#{config.prefix} / }.each(&:destroy)
+    Rake::Task['sidekiq_cron:clear'].invoke
     Sidekiq::Cron::Job.load_from_hash prefixed_hash
+  end
+
+  desc "Clear Sidekiq Cron entries"
+  task clear: :environment do
+    prefix = Sidekiq::Cron::Tasks.config.prefix
+    Sidekiq::Cron::Job.all.select { |job| job.name =~ /\A#{prefix} / }.each(&:destroy)
   end
 end

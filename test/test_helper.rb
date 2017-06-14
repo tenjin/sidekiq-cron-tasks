@@ -1,6 +1,7 @@
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 
+GEM_LIB_PATH = Pathname.new(File.expand_path("../../lib", __FILE__))
 DUMMY_APP_PATH = Pathname.new(File.expand_path("../../test/dummy", __FILE__))
 require DUMMY_APP_PATH.join("config/environment.rb")
 require "rails/test_help"
