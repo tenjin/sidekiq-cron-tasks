@@ -5,5 +5,5 @@ source 'https://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
-gem "rails", "6.0.3"
+gem "rails", "6.0.6.1"
 gem "pry"
