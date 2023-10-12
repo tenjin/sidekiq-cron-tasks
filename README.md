@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/coverhound/sidekiq-cron-tasks.svg?branch=master)](https://travis-ci.org/coverhound/sidekiq-cron-tasks)
 
-Adds `rake` and `cap` tasks for loading `Sidekiq::Cron::Job`s from a config
+Adds `rake` tasks for loading `Sidekiq::Cron::Job`s from a config
 file.
 
 ## Usage
@@ -42,16 +42,6 @@ Sidekiq::Cron::Tasks.configure do |config|
   config.file = "/custom/file/path"
   config.prefix = "notmyprefix"
 end
-```
-
-#### Capistrano
-
-You can enable this task for Capistrano deployment. It runs around the same time
-that Rails' db migrations do. To enable it:
-
-```rb
-# Capfile
-require 'capistrano/sidekiq-cron'
 ```
 
 ## Installation
