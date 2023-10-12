@@ -1,3 +1,4 @@
+require "rake"
 require "test_helper"
 require "minitest/spec"
 
