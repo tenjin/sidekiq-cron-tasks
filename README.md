@@ -44,16 +44,6 @@ Sidekiq::Cron::Tasks.configure do |config|
 end
 ```
 
-#### Capistrano
-
-You can enable this task for Capistrano deployment. It runs around the same time
-that Rails' db migrations do. To enable it:
-
-```rb
-# Capfile
-require 'capistrano/sidekiq-cron'
-```
-
 ## Installation
 Add this line to your application's Gemfile:
 

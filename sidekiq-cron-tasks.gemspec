@@ -17,7 +17,5 @@ Gem::Specification.new do |s|
   s.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "railties", "> 6.0"
-  s.add_dependency "capistrano-rails", "~> 1.1"
   s.add_dependency "sidekiq-cron", '> 1.10'
-  s.add_dependency "capistrano", ">= 3.4", "< 4.0"
 end
