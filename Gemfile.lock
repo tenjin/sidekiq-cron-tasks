@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sidekiq-cron-tasks (0.4.0)
+    sidekiq-cron-tasks (0.5.0)
       railties (> 6.0)
       sidekiq-cron (> 1.10)
 
