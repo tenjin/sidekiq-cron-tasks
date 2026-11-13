@@ -1,5 +1,6 @@
 require_relative 'boot'
 
+require "logger"
 require "rails"
 require "rails/test_unit/railtie"
 
